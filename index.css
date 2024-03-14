@@ -28,8 +28,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
+
 }
 ol, ul {
 	list-style: none;
@@ -58,24 +60,83 @@ header{
     background-color: #04120C;
     color:#b8e1ee;
 }
+a{
+    color:unset;
+    text-decoration: unset;
+}
 .button-in-header{
     padding:10px;
     font-weight: 700;
     cursor: pointer;
     box-sizing: border-box;
 }
+.long-text{
+    display: none;
+}
+.short-text{
+    display: inline;
+}
+@media (min-width : 800px){
+    .long-text{
+        display: inline;
+    }
+    .short-text{
+        display: none;
+    }
+}
 .button-in-header:hover{
     background-color: #127374;
 }
-#right-button{
+#right-buttons{
     display: flex;
 }
 #active-menu{
     background-color:#013a38;
 }
 #image-wrapper{
+    display: flex;
+    justify-content: center;
     overflow: hidden;
 }
 #main-image{
     min-width:1000px;
+} 
+#document-title{
+    color:#bbe1ee;
+    letter-spacing: 10px;
+    font-size:170%;
+    font-weight: 300;
+    padding:50px 0 40px;
 }
+#main-content-wrapper{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+#mountain-tag-wrapper{
+    font-size:18px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+}
+@media (min-width: 800px) {
+    #mountain-tag-wrapper{
+        flex-direction: row;
+    } 
+}
+.mountain-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+}
+.mountain-content-list{
+    background-color:#bbe1ee;
+    color:#04120c;
+    width: 325px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
